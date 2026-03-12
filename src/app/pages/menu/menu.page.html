@@ -1,7 +1,23 @@
 <section class="menu">
   <header class="menu__header">
     <h1>{{ menuTitle }}</h1>
+    <p>
+      Выбрано: {{ selectedCount }}.
+      Сумма: {{ selectedSum }}.
+    </p>
   </header>
 
-  <!-- There will be a list! -->
+  <div class="menu__list">
+    @for (item of items; track item.id) {
+      <label class="menu__item">
+        <input
+          type="checkbox"
+          [checked]="item.checked"
+          (change)="toggleItem(item.id)"
+        />
+        <span class="menu__label">{{ item.label }}</span>
+        <span class="menu__value">{{ item.value }}</span>
+      </label>
+    }
+  </div>
 </section>

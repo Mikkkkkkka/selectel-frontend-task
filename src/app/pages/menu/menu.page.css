@@ -8,3 +8,27 @@
   margin-bottom: 1rem;
 }
 
+.menu__list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.menu__item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.menu__item input {
+  margin: 0;
+}
+
+.menu__value {
+  color: #5c5c5c;
+}
